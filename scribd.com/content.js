@@ -5,8 +5,10 @@ const revealPage = () => {
         try {
             // remove promo pop-up from page
 
-            let promo = page.querySelector('.auto__doc_page_webpack_doc_page_blur_promo');
-            promo.parentElement.removeChild(promo);
+            let promo = page.querySelector('.promo_div');
+            if (promo) {
+                promo.parentElement.removeChild(promo);
+            }
 
             // Search for blured text and set to normal
 
